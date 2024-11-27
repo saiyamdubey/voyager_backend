@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import Chat from "./models/chat.js"; // Make sure this model file exists
+import Chat from "./models/chat.js"; 
 
 const port = 3000;
 const app = express();
