@@ -66,6 +66,17 @@ app.get("/api/chats/:id", async (req, res) => {
   }
 });
 
+
+app.get("/gfgshobhit", async (req, res) => {
+  try {
+    const response = await axios.get("https://geeks-for-geeks-api.vercel.app/shobhit_singh_gfg");
+    res.json(response.data);
+  } catch (error) {
+    console.error("Error fetching data:", error.message);
+    res.status(500).json({ error: "Failed to fetch data" });
+  }
+});
+
 // Start the server and connect to MongoDB
 app.listen(port, () => {
   connect();
